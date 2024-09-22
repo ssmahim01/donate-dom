@@ -154,7 +154,27 @@
                         <input type="text" id="donation-field" class="w-full pl-4 border border-gray-300 rounded-lg p-4" placeholder="Write Donation Amount" required>
                     </div>
 
-                    <button onclick="showModal()" class="w-full btn h-14 bg-lime-400 text-xl font-semibold" type="submit">Donate Now</button>
+                    <button onclick="second_modal.showModal()" class="w-full btn h-14 bg-lime-400 text-xl font-semibold" type="submit">Donate Now</button>
+
+                    <dialog id="second_modal" class="modal">
+                        <div class="modal-box flex flex-col justify-center items-center space-y-4">
+                            <h3 class="text-4xl font-extrabold">Congrates!</h3>
+        
+                            <img class="w-10" src="assets/coin.png" alt="Icon of coin">
+        
+                            <div class="text-center">
+                                <p class="py-4 text-base font-light">You Have Donated for Humankind</p>
+        
+                            <h3 class="text-xl font-bold text-blackPrimary">Successfully</h3>
+                            </div>
+        
+                            <div class="modal-action">
+                            <form method="dialog">
+                                <button class="btn font-semibold">close confirmation</button>
+                            </form>
+                            </div>
+                        </div>
+                        </dialog>
                 </div>
             </div>
         </section>
@@ -186,7 +206,27 @@
                         <input type="text" id="donation-field" class="w-full pl-4 border border-gray-300 rounded-lg p-4" placeholder="Write Donation Amount" required>
                     </div>
 
-                    <button onclick="showModal()" class="w-full btn h-14 bg-lime-400 text-xl font-semibold" type="submit">Donate Now</button>
+                    <button onclick="third_modal.showModal()" class="w-full btn h-14 bg-lime-400 text-xl font-semibold" type="submit">Donate Now</button>
+
+                    <dialog id="third_modal" class="modal">
+                        <div class="modal-box flex flex-col justify-center items-center space-y-4">
+                            <h3 class="text-4xl font-extrabold">Congrates!</h3>
+        
+                            <img class="w-10" src="assets/coin.png" alt="Icon of coin">
+        
+                            <div class="text-center">
+                                <p class="py-4 text-base font-light">You Have Donated for Humankind</p>
+        
+                            <h3 class="text-xl font-bold text-blackPrimary">Successfully</h3>
+                            </div>
+        
+                            <div class="modal-action">
+                            <form method="dialog">
+                                <button class="btn font-semibold">close confirmation</button>
+                            </form>
+                            </div>
+                        </div>
+                        </dialog>
                 </div>
             </div>
         </section>
