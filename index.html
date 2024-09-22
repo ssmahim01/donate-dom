@@ -33,13 +33,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
 
 </head>
-<body class="font-Lexend">
+<body class="font-Lexend bg-primary">
     <!-- Header Start -->
      <header>
 
     <!-- Navbar -->
 
-    <nav class="bg-primary shadow-sm h-32">
+    <nav class="shadow-sm h-32">
         <div class="w-4/5 mx-auto flex justify-between items-center pt-6">
             <div>
                 <button id="blog-btn" class="btn text-base bg-lime-400 text-blackPrimary font-semibold px-6">Blog</button>
@@ -62,7 +62,7 @@
 </header>
 <!-- Header End -->
 
-    <main>
+    <main class="bg-white">
 
         <!-- Donate buttons Section -->
 
@@ -73,6 +73,39 @@
             <div>
                 <button id="history-btn" class="btn bg-transparent text-base font-semibold text-gray-600 border border-gray-400 px-7">History</button>
             </div>
+        </section>
+
+        <!-- Donation card content 1 -->
+
+        <section class="w-4/5 mx-auto border border-gray-300 p-8 rounded-2xl">
+            <div class="flex justify-between items-center space-x-8">
+                <div class="sm:w-1/2">
+                    <img class="w-full" src="assets/noakhali.png" alt="Flood in Noakhali">
+                </div>
+
+                <div class="sm:w-1/2 space-y-6">
+                    <button class="px-5 py-3 flex items-center bg-slate-100 rounded-lg">
+                        <img class="w-7" src="assets/coin.png" alt="Icon of coin">
+                        <p class="ml-3">
+                            <span id="total-donate" class="text-gray-600 font-semibold">0</span>
+                            <span class="text-gray-600 font-semibold">BDT</span>
+                        </p>
+                    </button>
+
+                    <div class="space-y-4">
+                        <h3 class="text-xl text-blackPrimary font-bold">Donate for Flood at Noakhali, Bangladesh</h3>
+
+                        <p class="text-base font-light text-gray-600">The recent floods in Noakhali have caused significant damage to homes infrastructure. Your donation will help provide essential supplies and to those affected by this disaster. Every contribution, big or small makes difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
+                    </div>
+
+                    <div>
+                        <input type="text" id="donation-field" class="w-full pl-4 border border-gray-300 rounded-lg p-4" placeholder="Write Donation Amount" required>
+                    </div>
+
+                    <button onclick="showModal()" class="w-full btn h-14 bg-lime-400 text-xl font-semibold" type="submit">Donate Now</button>
+                </div>
+            </div>
+
         </section>
     </main>
     <script src="JS/donate.js"></script>
