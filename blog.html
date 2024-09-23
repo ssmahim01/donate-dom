@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <!-- Tailwind CSS and Daisy UI CDN -->
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                primary: 'rgb(249, 247, 243)',
+                blackPrimary: 'rgb(17, 17, 17)',
+              },
+              fontFamily: {
+                Lexend: 'Lexend',
+              },
+            },
+          },
+        }
+      </script>
+
+    <!-- Lexend google fonts link -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+     <!-- Navbar -->
+        
+     <nav class="shadow-sm h-32 bg-primary">
+        <div class="sm:w-4/5 w-11/12 mx-auto fixed lg:left-36 md:left-24">
+            <div class="flex justify-between items-center p-10 backdrop-blur-md">
+                <div>
+                        <button id="blog-btn" class="btn text-base bg-lime-400 text-blackPrimary font-semibold px-6">Blog</button>
+                    </div>
+            
+                    <div class="flex gap-2 items-center">
+                        <img class="w-12" src="assets/logo.png" alt="Logo of donation">
+                        <h3 class="text-xl hidden sm:block text-blackPrimary font-semibold">Donate Bangladesh</h3>
+                    </div>
+        
+                    <div class="flex gap-2 items-center">
+                        <img src="assets/coin.png" alt="Icon of coin">
+                        <p class="text-gray-600 text-xl font-semibold">
+                            <span>5500 </span>
+                            <span>BDT</span>
+                        </p>
+                    </div>
+            </div>
+            </div>
+        </nav>
+
+        <script src="js/blog.js"></script>
+</body>
+</html>
