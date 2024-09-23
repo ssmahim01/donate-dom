@@ -1,5 +1,9 @@
 // Using DOM in contents.
 
+let count = 0;
+const btnClass = document.getElementsByClassName('donate-btn');
+const mainBalance = parseFloat(document.getElementById('main-balance').innerText);
+
 // Using function.
 
 function inputValue(id){
@@ -7,42 +11,116 @@ function inputValue(id){
     return convertNumber;
 }
 
-function showModal(id){
-    const modal = document.getElementById(id);
-    modal.className = "hidden";
-    alert('Invalid Amount!');
+function textValue(id){
+    const convertNumber2 = parseFloat(document.getElementById(id).innerText);
+    return convertNumber2;
 }
 
-let count = 0;
+// function showModal(id){
+//     const modal = document.getElementById(id);
+//     modal.className = "hidden";
+//     alert('Invalid Amount!');
+// }
+
 const donateBtn1 = document.getElementById('donate-btn1');
-
-donateBtn1.addEventListener('click', function(event){
-    event.preventDefault();
-    const inputField = inputValue('first-donation-field');
-    const totalDonate = parseFloat(document.getElementById('total-donate1').innerText);
-
-    if(isNaN(inputField) || inputField < 0){
-        showModal('first_modal');
-    }
+donateBtn1.addEventListener('click', function(){
+    const firstField = inputValue('first-donation-field');
+    if(typeof firstField === 'number' && firstField > 0){
+        const totalDonate = textValue('total-donate1');
     
-    count = inputField + totalDonate;
+        const total = firstField + totalDonate;
+        
+        document.getElementById('total-donate1').innerText = total;
+        
+        const remainingBalance = mainBalance - total;
+    
+        document.getElementById('main-balance').innerText = remainingBalance;
 
-    const main_balance = parseFloat(document.getElementById('main-balance').innerText);
-    const remaining_balance = main_balance - count;
+       const firstTransaction = document.getElementById('first-transaction').innerText;
 
-    const donateFirstTransaction = document.getElementById('first-transaction');
-
-    const div = document.createElement('div');
-    div.className = "flex flex-col space-y-4 border border-gray-300 p-6";
+          const div = document.createElement('div');
     
     div.innerHTML = `
-    <h3 class="text-xl font-bold">${inputField} Taka is ${donateFirstTransaction}</h3>
-    <p class="text-sm font-medium text-gray-300">Date: ${new Date().toLocaleDateString}</p>
+    <h3 class="text-xl font-bold">${firstField} Taka is ${firstTransaction}</h3>
+    <p class="text-sm font-medium text-gray-300">Date: ${new Date().toLocaleString}</p>
     `;
 
     const historySection = document.getElementById('history-section');
-    historySection.insertBefore = (div, historySection.firstChild);
+
+    
+    }
+
+    else{
+        alert('Invalid Amount!');
+    }
 });
+
+const donateBtn2 = document.getElementById('donate-btn2');
+donateBtn2.addEventListener('click', function(){
+    const secondField = inputValue('second-donation-field');
+    if(typeof secondField === 'number' && secondField > 0){
+        const totalDonate = textValue('total-donate2');
+    
+        const total = secondField + totalDonate;
+        
+        document.getElementById('total-donate2').innerText = total;
+        
+        const remainingBalance = mainBalance - total;
+    
+        document.getElementById('main-balance').innerText = remainingBalance;
+
+       const secondTransaction = document.getElementById('second-transaction').innerText;
+
+          const div = document.createElement('div');
+    
+    div.innerHTML = `
+    <h3 class="text-xl font-bold">${secondField} Taka is ${secondTransaction}</h3>
+    <p class="text-sm font-medium text-gray-300">Date: ${new Date().toLocaleString}</p>
+    `;
+
+    const historySection = document.getElementById('history-section');
+
+
+    }
+
+    else{
+        alert('Invalid Amount!');
+    }
+});
+
+const donateBtn3 = document.getElementById('donate-btn3');
+donateBtn3.addEventListener('click', function(){
+    const thirdField = inputValue('third-donation-field');
+    if(typeof thirdField === 'number' && thirdField > 0){
+        const totalDonate = textValue('total-donate3');
+    
+        const total = thirdField + totalDonate;
+        
+        document.getElementById('total-donate3').innerText = total;
+        
+        const remainingBalance = mainBalance - total;
+    
+        document.getElementById('main-balance').innerText = remainingBalance;
+
+       const thirdTransaction = document.getElementById('third-transaction').innerText;
+
+          const div = document.createElement('div');
+    
+    div.innerHTML = `
+    <h3 class="text-xl font-bold">${thirdField} Taka is ${thirdTransaction}</h3>
+    <p class="text-sm font-medium text-gray-300">Date: ${new Date().toLocaleString}</p>
+    `;
+
+    const historySection = document.getElementById('history-section');
+
+
+    }
+
+    else{
+        alert('Invalid Amount!');
+    }
+});
+    
 
 const historyBtn = document.getElementById('history-btn');
 
@@ -73,5 +151,5 @@ donateBtn.addEventListener('click', function(){
 
 const blogBtn = document.getElementById('blog-btn');
 blogBtn.addEventListener('click', function(){
-    window.location = '/blog.html';
-})
+    window.location = './blog.html';
+});
