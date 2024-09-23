@@ -35,7 +35,7 @@
 </head>
 <body class="font-Lexend">
     <!-- Header Start -->
-     <header>
+     <header class="relative">
             <!-- Navbar -->
         
             <nav class="shadow-sm h-32 bg-primary">
@@ -63,13 +63,15 @@
         
             <!-- Donate Buttons Section -->
         
-            <section class="flex gap-4 justify-center items-center pt-16 pb-8">
+            <section class="pb-32">
+                <div class="sm:w-full w-11/12 mx-auto flex gap-4 justify-center items-center fixed p-6 backdrop-blur-md">
                     <div>
                         <button id="donate-btn" class="btn text-base bg-lime-400 text-blackPrimary font-semibold px-6">Donation</button>
                     </div>
                     <div>
                         <button id="history-btn" class="btn bg-transparent text-base font-semibold text-gray-600 border border-gray-400 px-7">History</button>
                     </div>
+                </div>
             </section>
         </header>
         <!-- Header End -->
@@ -239,6 +241,6 @@
        
     </div>
 
-    <script src="./js/donate.js"></script>
+    <script src="donate.js"></script>
 </body>
 </html>
