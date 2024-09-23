@@ -47,9 +47,11 @@ donateBtn1.addEventListener('click', function(event){
 const historyBtn = document.getElementById('history-btn');
 
 historyBtn.addEventListener('click', function(){
-    this.className = "btn text-base bg-lime-400 text-blackPrimary font-semibold px-6";
+    this.className = "btn text-base bg-lime-400 text-white font-medium px-6";
     this.classList.remove('text-gray-600');
+    this.classList.add('text-gray-600');
     const donateBtn = document.getElementById('donate-btn');
+    donateBtn.classList.add('text-blackPrimary');
     donateBtn.classList.remove("bg-lime-400");
 
     const donationSections = document.getElementById('donation-sections');
@@ -59,9 +61,10 @@ historyBtn.addEventListener('click', function(){
 const donateBtn = document.getElementById('donate-btn');
 
 donateBtn.addEventListener('click', function(){
-    this.className = "btn text-base bg-lime-400 text-blackPrimary font-semibold px-6";
-    this.classList.remove('text-gray-600');
+    this.className = "btn text-base bg-lime-400 text-white font-medium px-6";
+    this.classList.remove('text-blackPrimary');
     const historyBtn = document.getElementById('history-btn');
+    historyBtn.classList.add('text-blackPrimary');
     historyBtn.classList.remove("bg-lime-400");
 
     const donationSections = document.getElementById('donation-sections');
