@@ -1,17 +1,17 @@
 /* Using DOM in contents. */
 
 let classes = document.getElementsByClassName('donate-btn');
-let mainBalance = parseFloat(document.getElementById('main-balance').innerText);
+let mainBalance = parseInt(document.getElementById('main-balance').innerText);
 
 // Using function.
 
 function inputValue(id){
-    const convertNumber = parseFloat(document.getElementById(id).value);
+    const convertNumber = parseInt(document.getElementById(id).value);
     return convertNumber;
 }
 
 function textValue(id){
-    const convertNumber2 = parseFloat(document.getElementById(id).innerText);
+    const convertNumber2 = parseInt(document.getElementById(id).innerText);
     return convertNumber2;
 }
 
@@ -28,20 +28,20 @@ donateBtn1.addEventListener('click', function(){
     const firstField = inputValue('first-donation-field');
 
     if(typeof firstField === 'number' && firstField > 0){
-        if(mainBalance > firstField && mainBalance >= 0){
+        if(mainBalance > firstField && mainBalance > 0){
             const totalDonate1 = textValue('total-donate1');
             const totalDonate2 = textValue('total-donate2');
             const totalDonate3 = textValue('total-donate3');
                   
             const total = firstField + totalDonate1;
             
-            document.getElementById('total-donate1').innerText = total.toFixed(2);
+            document.getElementById('total-donate1').innerText = total;
             document.getElementById('first-donation-field').value = '';
             
             const remainingBalance = mainBalance - total;
             const newBalance = remainingBalance - totalDonate2 - totalDonate3;
 
-            document.getElementById('main-balance').innerText = newBalance.toFixed(2);
+            document.getElementById('main-balance').innerText = newBalance;
     
            const firstTransaction = document.getElementById('first-transaction').innerText;
     
@@ -78,20 +78,20 @@ donateBtn2.addEventListener('click', function(){
 
     if(typeof secondField === 'number' && secondField > 0){
 
-        if(mainBalance > secondField && mainBalance >= 0){
+        if(mainBalance > secondField && mainBalance > 0){
             const totalDonate1 = textValue('total-donate1');
             const totalDonate2 = textValue('total-donate2');
             const totalDonate3 = textValue('total-donate3');
 
             const total2 = secondField + totalDonate2;
             
-            document.getElementById('total-donate2').innerText = total2.toFixed(2);
+            document.getElementById('total-donate2').innerText = total2;
             document.getElementById('second-donation-field').value = '';
             
             const remainingBalance = mainBalance - total2;
             const newBalance = remainingBalance - totalDonate1 - totalDonate3;
         
-            document.getElementById('main-balance').innerText = newBalance.toFixed(2);
+            document.getElementById('main-balance').innerText = newBalance;
     
            const secondTransaction = document.getElementById('second-transaction').innerText;
     
@@ -126,7 +126,7 @@ const donateBtn3 = document.getElementById('donate-btn3');
 donateBtn3.addEventListener('click', function(){
     const thirdField = inputValue('third-donation-field');
     if(typeof thirdField === 'number' && thirdField > 0){
-        if(mainBalance > thirdField && mainBalance >= 0){
+        if(mainBalance > thirdField && mainBalance > 0){
 
             const totalDonate1 = textValue('total-donate1');
             const totalDonate2 = textValue('total-donate2');
@@ -134,13 +134,13 @@ donateBtn3.addEventListener('click', function(){
         
             const total3 = thirdField + totalDonate3;
             
-            document.getElementById('total-donate3').innerText = total3.toFixed(2);
+            document.getElementById('total-donate3').innerText = total3;
             document.getElementById('third-donation-field').value = '';
     
             const remainingBalance = mainBalance - total3;
             const newBalance = remainingBalance - totalDonate1 - totalDonate2;
             
-            document.getElementById('main-balance').innerText = newBalance.toFixed(2);
+            document.getElementById('main-balance').innerText = newBalance;
     
            const thirdTransaction = document.getElementById('third-transaction').innerText;
     
