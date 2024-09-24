@@ -3,15 +3,6 @@
 const classes = document.getElementsByClassName('donate-btn');
 const mainBalance = parseFloat(document.getElementById('main-balance').innerText);
 
-for(const id of classes){
-    id.addEventListener('click', function(){
-        if(mainBalance <= 0){
-            alert('You do not have sufficient Balance');
-            return;
-        }
-    });
-};
-
 // Using function.
 
 function inputValue(id){
@@ -23,12 +14,6 @@ function textValue(id){
     const convertNumber2 = parseFloat(document.getElementById(id).innerText);
     return convertNumber2;
 }
-
-// function showModal(id){
-//     const modal = document.getElementById(id);
-//     modal.className = "hidden";
-//     alert('Invalid Amount!');
-// }
 
 // First button content.
 
@@ -45,6 +30,10 @@ donateBtn1.addEventListener('click', function(){
         
         const remainingBalance = mainBalance - total;
         
+        if(mainBalance <= total){
+            alert('You do not have sufficient Balance!');
+            return;
+            }
 
         document.getElementById('main-balance').innerText = remainingBalance;
 
@@ -82,6 +71,11 @@ donateBtn2.addEventListener('click', function(){
         
         const totalDonate1 = textValue('total-donate1');
         const remainingBalance = mainBalance - totalDonate1 - total;
+
+        if(mainBalance <= total){
+            alert('You do not have sufficient Balance!');
+            return;
+            }
     
         document.getElementById('main-balance').innerText = remainingBalance;
 
@@ -120,7 +114,12 @@ donateBtn3.addEventListener('click', function(){
         const totalDonate1 = textValue('total-donate1');
         const totalDonate2 = textValue('total-donate2');
         const remainingBalance = mainBalance - totalDonate1 - totalDonate2 - total;
-    
+
+        if(mainBalance <= total){
+        alert('You do not have sufficient Balance!');
+        return;
+        }
+
         document.getElementById('main-balance').innerText = remainingBalance;
 
        const thirdTransaction = document.getElementById('third-transaction').innerText;
@@ -134,8 +133,8 @@ donateBtn3.addEventListener('click', function(){
     `;
 
     const historySection = document.getElementById('history-section');
-    // historySection.insertBefore(div, historySection.firstChild);
-    historySection.appendChild(div);
+    // historySection.appendChild(div);
+    historySection.insertBefore(div, historySection.firstChild);
 }
 
     else{
