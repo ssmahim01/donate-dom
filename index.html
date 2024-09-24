@@ -106,7 +106,7 @@
                     </div>
 
                     <button id="donate-btn1" onclick="first_modal.showModal()" class="donate-btn w-full btn h-14 bg-lime-400 text-xl font-semibold" type="submit">Donate Now</button>
-
+                    
                 <dialog id="first_modal" class="modal">
                 <div class="modal-box flex flex-col justify-center items-center space-y-4">
                     <h3 class="text-4xl font-extrabold">Congrates!</h3>
@@ -157,27 +157,7 @@
                         <input type="text" id="second-donation-field" class="w-full pl-4 border border-gray-300 rounded-lg p-4" placeholder="Write Donation Amount" required>
                     </div>
 
-                    <button id="donate-btn2" onclick="second_modal.showModal()" class="donate-btn w-full btn h-14 bg-lime-400 text-xl font-semibold" type="submit">Donate Now</button>
-
-                        <dialog id="second_modal" class="modal">
-                                <div class="modal-box flex flex-col justify-center items-center space-y-4">
-                                        <h3 class="text-4xl font-extrabold">Congrates!</h3>
-                    
-                                        <img class="w-10" src="assets/coin.png" alt="Icon of coin">
-                    
-                                        <div class="text-center">
-                                            <p class="py-4 text-base font-light">You Have Donated for Humankind</p>
-                    
-                                        <h3 class="text-xl font-bold text-blackPrimary">Successfully</h3>
-                                        </div>
-                    
-                                        <div class="modal-action">
-                                        <form method="dialog">
-                                            <button class="btn font-semibold">close confirmation</button>
-                                        </form>
-                                        </div>
-                                    </div>
-                                </dialog>
+                    <button id="donate-btn2" onclick="first_modal.showModal()" class="donate-btn w-full btn h-14 bg-lime-400 text-xl font-semibold" type="submit">Donate Now</button>
                     </div>
                         </div>
                 </div>
@@ -211,27 +191,7 @@
                         <input type="text" id="third-donation-field" class="w-full pl-4 border border-gray-300 rounded-lg p-4" placeholder="Write Donation Amount" required>
                     </div>
 
-                    <button id="donate-btn3" onclick="third_modal.showModal()" class="donate-btn w-full btn h-14 bg-lime-400 text-xl font-semibold" type="submit">Donate Now</button>
-
-                    <dialog id="third_modal" class="modal">
-                        <div class="modal-box flex flex-col justify-center items-center space-y-4">
-                            <h3 class="text-4xl font-extrabold">Congrates!</h3>
-        
-                            <img class="w-10" src="assets/coin.png" alt="Icon of coin">
-        
-                            <div class="text-center">
-                                <p class="py-4 text-base font-light">You Have Donated for Humankind</p>
-        
-                            <h3 class="text-xl font-bold text-blackPrimary">Successfully</h3>
-                            </div>
-        
-                            <div class="modal-action">
-                            <form method="dialog">
-                                <button class="btn font-semibold">close confirmation</button>
-                            </form>
-                            </div>
-                        </div>
-                        </dialog>
+                    <button id="donate-btn3" onclick="first_modal.showModal()" class="donate-btn w-full btn h-14 bg-lime-400 text-xl font-semibold" type="submit">Donate Now</button>
                 </div>
             </div>
         </section>  
@@ -243,7 +203,7 @@
 
     </section>
     
-    <footer class="bg-primary h-32 mt-20"></footer>
+    <footer id="footer" class="bg-primary h-32 mt-20"></footer>
     <script src="donate.js"></script>
 </body>
 </html>
