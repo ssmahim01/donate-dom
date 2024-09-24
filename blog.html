@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
-    <!-- Tailwind CSS and Daisy UI CDN -->
 
+    <!-- Font Awesome CDN -->
+    <script src="https://kit.fontawesome.com/688e7a57b2.js" crossorigin="anonymous"></script>
+
+    <!-- Tailwind CSS and Daisy UI CDN -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -26,36 +29,79 @@
       </script>
 
     <!-- Lexend google fonts link -->
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-     <!-- Navbar -->
-        
-     <nav class="shadow-sm h-32 bg-primary">
-        <div class="sm:w-4/5 w-11/12 mx-auto fixed lg:left-36 md:left-24">
-            <div class="flex justify-between items-center p-10 backdrop-blur-md">
-                <div>
-                        <button id="home-btn" class="btn text-base bg-lime-400 text-blackPrimary font-bold px-6">Home</button>
-                    </div>
-            
-                    <div class="flex gap-2 items-center">
-                        <img class="w-12" src="assets/logo.png" alt="Logo of donation">
-                        <h3 class="text-xl hidden sm:block text-blackPrimary font-semibold">Donate Bangladesh</h3>
-                    </div>
-        
-                    <div class="flex gap-2 items-center">
-                        <img src="assets/coin.png" alt="Icon of coin">
-                        <p class="text-gray-600 text-xl font-semibold">
-                            <span>5500 </span>
-                            <span>BDT</span>
-                        </p>
-                    </div>
-            </div>
-            </div>
-        </nav>
+
+  <header>
+    <!-- Navbar -->
+       
+    <nav class="shadow-sm h-32 bg-primary">
+       <div class="sm:w-4/5 w-11/12 mx-auto fixed lg:left-36 md:left-24">
+           <div class="flex justify-between items-center p-10 backdrop-blur-md">
+               <div>
+                       <button id="home-btn" class="btn text-base bg-lime-400 text-blackPrimary font-bold px-6">Home</button>
+                   </div>
+           
+                   <div class="flex gap-2 items-center">
+                       <img class="w-12" src="assets/logo.png" alt="Logo of donation">
+                       <h3 class="text-xl hidden sm:block text-blackPrimary font-semibold">Donate Bangladesh</h3>
+                   </div>
+       
+                   <div class="flex gap-2 items-center">
+                       <img src="assets/coin.png" alt="Icon of coin">
+                       <p class="text-gray-600 text-xl font-semibold">
+                           <span>5500 </span>
+                           <span>BDT</span>
+                       </p>
+                   </div>
+           </div>
+           </div>
+       </nav>
+  </header>
+
+  <main>
+
+    <!-- FAQ Section -->
+
+    <section class="w-4/5 mx-auto grid grid-cols-1 space-y-7 mt-12">
+      <h2 class="text-4xl font-bold">Important FAQ <i class="fa-regular fa-circle-question"></i></h2>
+
+      <div class="lg:w-3/4 space-y-6">
+        <div class="collapse collapse-arrow bg-base-200">
+          <input type="radio" name="my-accordion-2" checked="checked" />
+          <div class="collapse-title text-xl font-bold">a. What is the Document Object Model (DOM)?</div>
+          <div class="collapse-content">
+            <p class="font-semibold">The Document Object Model(DOM) is a programming interface for web documents.It represents the structure of a webpage as a tree of objects, where each part of the document is an object that can be manipulated by programming languages such as JavaScript.</p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow bg-base-200">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title text-xl font-bold">b. How do you select an element from the DOM?</div>
+          <div class="collapse-content">
+            <p class="font-semibold">There are several methods available, to select an element from the DOM.Use getElementById() for selecting a unique element by its ID.Use getElementsByClassName() or getElementsByTagName() for selecting multiple elements by class or tag name.Use querySelector() or querySelectorAll() for more complex CSS selector-based queries.</p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow bg-base-200">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title text-xl font-bold">c. What is event delegation in the context of the DOM, and why is it useful?</div>
+          <div class="collapse-content">
+            <p class="font-semibold">Event delegation is a technique in JavaScript that allows to manage events more efficiently by taking advantage of event bubbling.Event delegation allows to handle events using a single listener, which improves performance, especially when dealing with dynamically changing.The event delegation technique automatically handles events from dynamically created child elements.You do not have to write repetitive code to add event listeners to multiple child elements, Instead a single event listener on the parent element can manage all the children.</p>
+          </div>
+        </div>
+
+        <div class="collapse collapse-arrow bg-base-200">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title text-xl font-bold">d. How do you manipulate an element's attributes and styles using the DOM?</div>
+          <div class="collapse-content">
+            <p class="font-semibold">We can manipulate an element's attributes and styles using the DOM in JavaScript by accessing the element and modifying its properties,classes,attributes or styles.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
         <script src="blog.js"></script>
 </body>
 </html>
