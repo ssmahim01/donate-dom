@@ -1,5 +1,6 @@
 /* Using DOM in contents. */
 
+let classes = document.getElementsByClassName('donate-btn');
 let mainBalance = parseFloat(document.getElementById('main-balance').innerText);
 
 // Using function.
