@@ -26,7 +26,7 @@ const donateBtn1 = document.getElementById('donate-btn1');
 
 donateBtn1.addEventListener('click', function(){
     const firstField = inputValue('first-donation-field');
-    if(typeof firstField === 'number' && firstField >= 0){
+    if(typeof firstField === 'number' && firstField > 0){
         if(mainBalance > firstField){
             const totalDonate = textValue('total-donate1');
             
@@ -71,7 +71,7 @@ donateBtn1.addEventListener('click', function(){
 const donateBtn2 = document.getElementById('donate-btn2');
 donateBtn2.addEventListener('click', function(){
     const secondField = inputValue('second-donation-field');
-    if(typeof secondField === 'number' && secondField >= 0){
+    if(typeof secondField === 'number' && secondField > 0){
         if(mainBalance > secondField){
             const totalDonate = textValue('total-donate2');
         
@@ -117,7 +117,7 @@ donateBtn2.addEventListener('click', function(){
 const donateBtn3 = document.getElementById('donate-btn3');
 donateBtn3.addEventListener('click', function(){
     const thirdField = inputValue('third-donation-field');
-    if(typeof thirdField === 'number' && thirdField >= 0){
+    if(typeof thirdField === 'number' && thirdField > 0){
         if(mainBalance > thirdField){
             const totalDonate = textValue('total-donate3');
         
