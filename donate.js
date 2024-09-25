@@ -1,7 +1,6 @@
 /* Using DOM in contents. */
 
 let classes = document.getElementsByClassName('donate-btn');
-let mainBalance = parseInt(document.getElementById('main-balance').innerText);
 
 // Using function.
 
@@ -25,10 +24,11 @@ function textValue(id){
 const donateBtn1 = document.getElementById('donate-btn1');
 
 donateBtn1.addEventListener('click', function(){
+    const mainBalance = parseInt(document.getElementById('main-balance').innerText);
     const firstField = inputValue('first-donation-field');
 
     if(typeof firstField === 'number' && firstField > 0){
-        if(mainBalance > firstField && mainBalance > 0){
+        if(mainBalance >= firstField && mainBalance > 0){
             const totalDonate1 = textValue('total-donate1');
             const totalDonate2 = textValue('total-donate2');
             const totalDonate3 = textValue('total-donate3');
@@ -64,7 +64,7 @@ donateBtn1.addEventListener('click', function(){
         }
 }
     else{
-        alert('Invalid Amount!');
+        alert('Invalid Amount! Please give a valid number and greater than 0');
         document.getElementById('first_modal').close();
         return;
     }
@@ -74,15 +74,16 @@ donateBtn1.addEventListener('click', function(){
 
 const donateBtn2 = document.getElementById('donate-btn2');
 donateBtn2.addEventListener('click', function(){
+    const mainBalance = parseInt(document.getElementById('main-balance').innerText);
     const secondField = inputValue('second-donation-field');
-
+    
     if(typeof secondField === 'number' && secondField > 0){
-
-        if(mainBalance > secondField && mainBalance > 0){
+        
+        if(mainBalance >= secondField && mainBalance > 0){
             const totalDonate1 = textValue('total-donate1');
             const totalDonate2 = textValue('total-donate2');
             const totalDonate3 = textValue('total-donate3');
-
+            
             const total2 = secondField + totalDonate2;
             
             document.getElementById('total-donate2').innerText = total2;
@@ -114,7 +115,7 @@ donateBtn2.addEventListener('click', function(){
     }
 
     else{
-        alert('Invalid Amount!');
+        alert('Invalid Amount! Please give a valid number and greater than 0');
         document.getElementById('first_modal').close();
         return;
     }
@@ -124,14 +125,15 @@ donateBtn2.addEventListener('click', function(){
 
 const donateBtn3 = document.getElementById('donate-btn3');
 donateBtn3.addEventListener('click', function(){
+    const mainBalance = parseInt(document.getElementById('main-balance').innerText);
     const thirdField = inputValue('third-donation-field');
     if(typeof thirdField === 'number' && thirdField > 0){
-        if(mainBalance > thirdField && mainBalance > 0){
-
+        if(mainBalance >= thirdField && mainBalance > 0){
+            
             const totalDonate1 = textValue('total-donate1');
             const totalDonate2 = textValue('total-donate2');
             const totalDonate3 = textValue('total-donate3');
-        
+          
             const total3 = thirdField + totalDonate3;
             
             document.getElementById('total-donate3').innerText = total3;
@@ -156,6 +158,7 @@ donateBtn3.addEventListener('click', function(){
         // historySection.appendChild(div);
         historySection.insertBefore(div, historySection.firstChild);
         document.getElementById('first_modal').showModal();
+
      }else{
        alert('You do not have sufficient Balance!');
         document.getElementById('first_modal').close();
@@ -164,7 +167,7 @@ donateBtn3.addEventListener('click', function(){
     }
 
     else{
-        alert('Invalid Amount!');
+        alert('Invalid Amount! Please give a valid number and greater than 0');
         document.getElementById('first_modal').close();
         return;
     }
