@@ -28,20 +28,18 @@ donateBtn1.addEventListener('click', function(){
     const firstField = inputValue('first-donation-field');
 
     if(typeof firstField === 'number' && firstField > 0){
-        if(mainBalance >= firstField && mainBalance > 0){
+        if(mainBalance >= firstField && mainBalance >= 0){
             const totalDonate1 = textValue('total-donate1');
-            const totalDonate2 = textValue('total-donate2');
-            const totalDonate3 = textValue('total-donate3');
                   
             const total = firstField + totalDonate1;
             
             document.getElementById('total-donate1').innerText = total;
             document.getElementById('first-donation-field').value = '';
             
-            const remainingBalance = mainBalance - total;
-            const newBalance = remainingBalance - totalDonate2 - totalDonate3;
+            const remainingBalance = mainBalance - firstField;
+            // const newBalance = remainingBalance - totalDonate2 - totalDonate3;
 
-            document.getElementById('main-balance').innerText = newBalance;
+            document.getElementById('main-balance').innerText = remainingBalance;
     
            const firstTransaction = document.getElementById('first-transaction').innerText;
     
@@ -49,7 +47,7 @@ donateBtn1.addEventListener('click', function(){
                div.className = "w-4/5 mx-auto space-y-4 border border-gray-300 p-6 rounded-lg"
                
         div.innerHTML = `
-        <h3 class="text-xl font-bold">${firstField} Taka is ${firstTransaction}</h3>
+        <h3 class="text-xl font-bold">${firstField} Taka is Donated for ${firstTransaction}</h3>
         <p class="text-sm font-medium text-gray-500">Date: ${new Date()}</p>
         `;
         
@@ -79,20 +77,18 @@ donateBtn2.addEventListener('click', function(){
     
     if(typeof secondField === 'number' && secondField > 0){
         
-        if(mainBalance >= secondField && mainBalance > 0){
-            const totalDonate1 = textValue('total-donate1');
+        if(mainBalance >= secondField && mainBalance >= 0){
             const totalDonate2 = textValue('total-donate2');
-            const totalDonate3 = textValue('total-donate3');
             
             const total2 = secondField + totalDonate2;
             
             document.getElementById('total-donate2').innerText = total2;
             document.getElementById('second-donation-field').value = '';
             
-            const remainingBalance = mainBalance - total2;
-            const newBalance = remainingBalance - totalDonate1 - totalDonate3;
+            const remainingBalance = mainBalance - secondField;
+            // const newBalance = remainingBalance - totalDonate1 - totalDonate3;
         
-            document.getElementById('main-balance').innerText = newBalance;
+            document.getElementById('main-balance').innerText = remainingBalance;
     
            const secondTransaction = document.getElementById('second-transaction').innerText;
     
@@ -101,7 +97,7 @@ donateBtn2.addEventListener('click', function(){
                div.className = "w-4/5 mx-auto space-y-4 border border-gray-300 p-6 rounded-lg"
         
         div.innerHTML = `
-        <h3 class="text-xl font-bold">${secondField} Taka is ${secondTransaction}</h3>
+        <h3 class="text-xl font-bold">${secondField} Taka is Donated for ${secondTransaction}</h3>
         <p class="text-sm font-medium text-gray-500">Date: ${new Date()}</p>
         `;
     
@@ -128,10 +124,8 @@ donateBtn3.addEventListener('click', function(){
     const mainBalance = parseInt(document.getElementById('main-balance').innerText);
     const thirdField = inputValue('third-donation-field');
     if(typeof thirdField === 'number' && thirdField > 0){
-        if(mainBalance >= thirdField && mainBalance > 0){
+        if(mainBalance >= thirdField && mainBalance >= 0){
             
-            const totalDonate1 = textValue('total-donate1');
-            const totalDonate2 = textValue('total-donate2');
             const totalDonate3 = textValue('total-donate3');
           
             const total3 = thirdField + totalDonate3;
@@ -139,10 +133,10 @@ donateBtn3.addEventListener('click', function(){
             document.getElementById('total-donate3').innerText = total3;
             document.getElementById('third-donation-field').value = '';
     
-            const remainingBalance = mainBalance - total3;
-            const newBalance = remainingBalance - totalDonate1 - totalDonate2;
+            const remainingBalance = mainBalance - thirdField;
+            // const newBalance = remainingBalance - totalDonate1 - totalDonate2;
             
-            document.getElementById('main-balance').innerText = newBalance;
+            document.getElementById('main-balance').innerText = remainingBalance;
     
            const thirdTransaction = document.getElementById('third-transaction').innerText;
     
